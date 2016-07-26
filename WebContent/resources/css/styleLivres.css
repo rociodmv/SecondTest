@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+.titres {
+	background-color: #afd8d8;
+	color: gray;
+	font-size: larger;
+	text-align: center; 
+}
+
+.headers {
+	text-align: left;
+}  

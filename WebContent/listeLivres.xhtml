@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core" 
+xmlns:h="http://xmlns.jcp.org/jsf/html" >
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Liste de livres</title>
+<h:outputStylesheet library="css" name="styleLivres.css" />
+</h:head>
+<h:body>
+
+<h:outputText value="Voilà vos livres!"
+		styleClass="titres">
+</h:outputText>
+
+<h:dataTable value="#{livreContr.listLiv}" var="livre">
+
+	<h:column>
+ 	<f:facet name="header" headerClass="header">id</f:facet>
+ 	#{livre.id}
+ 	</h:column>
+
+ 	<h:column>
+ 	<f:facet name="header" headerClass="header">Titre</f:facet>
+ 	#{livre.titre}
+ 	</h:column>
+ 
+ 	<h:column>
+ 	<f:facet name="header">Auteur</f:facet>
+ 	#{livre.auteur}
+ 	</h:column>
+ 	
+ 	<h:column>
+ 	<f:facet name="header">Genre</f:facet>
+ 	#{livre.type}
+ 	</h:column>
+ 
+ </h:dataTable>
+
+<h:outputText value="Ajouter un nouveau livre    " />
+<h:form>
+ <h:button value="Go!" outcome="index" />
+</h:form>
+
+
+</h:body>
+</html>
